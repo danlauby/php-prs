@@ -3,20 +3,22 @@
 
     class RockPaperScissorsTest extends PHPUnit_Framework_TestCase
     {
-        function test_checkRock()
+        function test_checkTie()
         {
 
             // Arrange
-            $test_rock = new RockPaperScissors;
-            $input_one = "Rock";
-            $input_two = "Rock";
+            $test_tie = new RockPaperScissors;
+            $input_one = "rock scissor paper";
+            $input_two = "rock scissor paper";
 
             //Act
-            $result = $test_rock->checkRock($input_one, $input_two);
+            $result = $test_tie->checkTie($input_one, $input_two);
 
             // Assert
             $this->assertEquals('tie', $result);
         }
+
+        
     }
 
     // Arrange

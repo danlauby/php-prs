@@ -1,9 +1,9 @@
 <?php
     class RockPaperScissors
     {
-        function checkRock()
+        function checkTie()
         {
-            if ('Rock' == 'Rock') {
+            if ('rock' == 'rock' || 'scissors' == 'scissors' || 'paper' == 'paper') {
                 return 'tie';
             }
         }
