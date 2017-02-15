@@ -31,7 +31,7 @@
         $new_game = new RockPaperScissors($player_one, $player_two);
         $win = $new_game->checkInput($player_one, $player_two);
         $new_game->save();
-        return $app['twig']->render('win.html.twig', array('newgame' => $win));
+        return $app['twig']->render('win.html.twig', array('winner' => $win));
     });
     return $app;
 ?>
