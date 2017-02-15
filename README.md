@@ -48,4 +48,5 @@ This project is a Rock Paper Scissors game. It allows the user to
 |Paper vs Rock| input1 = Paper, input2 = Rock| Paper|
 |Paper vs Scissors| input1 = Paper, input2 = Scissors| Scissors|
 |Rock vs Scissors| input1 = Rock, input2 = Scissors| Rock|
+
 * End specifications
