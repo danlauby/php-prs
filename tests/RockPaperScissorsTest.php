@@ -47,6 +47,20 @@
             $this->assertEquals('scissors', $result);
         }
 
+        function test_checkRockScissors()
+        {
+            // Arrange
+            $test_rock_scissors = new RockPaperScissors;
+            $input_one = "rock";
+            $input_two = "scissors";
+
+            // Act
+            $result = $test_rock_scissors->checkRockScissors($input_one, $input_two);
+
+            // Assert
+            $this->assertEquals('rock', $result);
+        }
+
 
     }
 

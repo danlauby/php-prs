@@ -22,6 +22,13 @@
             }
         }
 
+        function checkRockScissors($input_one, $input_two)
+        {
+            if ($input_one == 'rock' && $input_two == 'scissors') {
+                return 'rock';
+            }
+        }
+
 
     }
 
