@@ -41,6 +41,11 @@ This project is a Rock Paper Scissors game. It allows the user to
 ## Specifications
 
 |Behavior|Input|Output|
-|--------|-----|------|
-
+|-------------------|-----|------|
+|Rock vs Rock       | input1 = Rock, input2 = Rock| tie        |
+|Scissor vs Scissors| input1 = Scissors, input2 = Scissors| tie|
+|Paper vs Paper| input1 = Paper, input2 = Paper| tie|
+|Paper vs Rock| input1 = Paper, input2 = Rock| Paper|
+|Paper vs Scissors| input1 = Paper, input2 = Scissors| Scissors|
+|Rock vs Scissors| input1 = Rock, input2 = Scissors| Rock|
 * End specifications
