@@ -14,6 +14,15 @@
                 return 'paper';
             }
         }
+
+        function checkPaperScissors($input_one, $input_two)
+        {
+            if ($input_one == 'paper' && $input_two == 'scissors') {
+                return 'scissors';
+            }
+        }
+
+
     }
 
 ?>

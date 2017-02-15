@@ -33,12 +33,23 @@
             $this->assertEquals('paper', $result);
         }
 
+        function test_checkPaperScissors()
+        {
+            // Arrange
+            $test_paper_scissors = new RockPaperScissors;
+            $input_one = "paper";
+            $input_two = "scissors";
+
+            //Act
+            $result = $test_paper_scissors->checkPaperScissors($input_one, $input_two);
+
+            // Assert
+            $this->assertEquals('scissors', $result);
+        }
+
 
     }
 
-    // Arrange
-    //Act
-    // Assert
 
 
 ?>
