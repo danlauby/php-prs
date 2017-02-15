@@ -21,7 +21,7 @@
     ));
 
     $app->get('/', function() use ($app) {
-        return $app['twig']->render('game.html.twig', array('game' => RockPaperScissors::getAll()));
+        return $app['twig']->render('game.html.twig', array('games' => RockPaperScissors::getAll()));
     });
 
     $app->post("/game", function() use($app) {

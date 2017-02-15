@@ -16,6 +16,14 @@
                 <input class="form-control" type="text" name="player-two" required><br>
                 <button class="btn btn-danger" type="submit" name="button">Play!</button>
             </form>
+            {% if games is not empty %}
+                <ul>
+                    {% for game in games %}
+                    <li>{{ game.player_one }}</li>
+                    <li>{{ game.player_two }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
 
     </body>
