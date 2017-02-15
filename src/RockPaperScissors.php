@@ -1,33 +1,40 @@
 <?php
     class RockPaperScissors
     {
-        function checkTie()
+        public $player_one;
+        public $player_two;
+
+        function __construct($new_player_one, $new_player_two)
         {
-            if ('rock' == 'rock' || 'scissors' == 'scissors' || 'paper' == 'paper') {
+            $this->player_one = $new_player_one;
+            $this->player_two = $new_player_two;
+        }
+
+        function checkInput($new_player_one, $new_player_two)
+        {
+            if ($new_player_one == 'paper' && $new_player_two == 'rock' || $new_player_one == 'rock' && $new_player_two == 'paper') {
+                return 'paper';
+            }
+            elseif ($new_player_one == 'paper' && $new_player_two == 'scissors' || $new_player_one == 'scissors' && $new_player_two == 'paper') {
+                return 'scissors';
+            }
+            elseif ($new_player_one == 'rock' && $new_player_two == 'scissors' || $new_player_one == 'scissors' && $new_player_two == 'rock') {
+                return 'rock';
+            }
+            elseif ($new_player_one == $new_player_two) {
                 return 'tie';
             }
         }
 
-        function checkPaperRock($input_one, $input_two)
-        {
-            if ($input_one == 'paper' && $input_two == 'rock') {
-                return 'paper';
-            }
-        }
+        static function getAll()
+       {
+           return $_SESSION['list_of_answers'];
+       }
 
-        function checkPaperScissors($input_one, $input_two)
-        {
-            if ($input_one == 'paper' && $input_two == 'scissors') {
-                return 'scissors';
-            }
-        }
-
-        function checkRockScissors($input_one, $input_two)
-        {
-            if ($input_one == 'rock' && $input_two == 'scissors') {
-                return 'rock';
-            }
-        }
+       function save()
+       {
+           array_push($_SESSION['list_of_answers'], $this);
+       }
 
 
     }
