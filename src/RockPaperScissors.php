@@ -31,6 +31,11 @@
            return $_SESSION['list_of_answers'];
        }
 
+       static function deleteAll()
+       {
+           $_SESSION['list_of_answers'] = array();
+       }
+
        function save()
        {
            array_push($_SESSION['list_of_answers'], $this);

@@ -33,5 +33,11 @@
         $new_game->save();
         return $app['twig']->render('win.html.twig', array('winner' => $win));
     });
+
+    $app->post('/delete', function() use($app) {
+        RockPaperScissors::deleteAll();
+        return $app['twig']->render('delete.html.twig');
+    });
+
     return $app;
 ?>

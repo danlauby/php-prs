@@ -9,13 +9,14 @@
     <body>
         <div class="container">
             <h1>Play Rock Paper Scissors!</h1>
-            <form class="form-group" action="/game" method="POST">
+            <form class="form-group" action="/game" method="post">
                 <label for="player-one">Player 1</label>
                 <input class="form-control" type="text" name="player-one" required>
                 <label for="player-two">Player 2</label>
                 <input class="form-control" type="text" name="player-two" required><br>
-                <button class="btn btn-danger" type="submit" name="button">Play!</button>
+                <button class="btn btn-success" type="submit" name="button">Play!</button>
             </form>
+
             {% if games is not empty %}
                 <ul>
                     {% for game in games %}
@@ -23,7 +24,12 @@
                     <li>{{ game.player_two }}</li>
                     {% endfor %}
                 </ul>
+                <form class="form-group" action="/delete" method="post">
+                    <button class="btn btn-danger" type="submit" name="button">Delete All Games</button>
+                </form>
             {% endif %}
+
+
         </div>
 
     </body>
