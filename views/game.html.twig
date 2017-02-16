@@ -24,6 +24,7 @@
                     <li>{{ game.player_two }}</li>
                     {% endfor %}
                 </ul>
+                <h2>{{ winner }} is the winner</h2>
                 <form class="form-group" action="/delete" method="post">
                     <button class="btn btn-danger" type="submit" name="button">Delete All Games</button>
                 </form>

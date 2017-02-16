@@ -24,7 +24,7 @@
         return $app['twig']->render('game.html.twig', array('games' => RockPaperScissors::getAll()));
     });
 
-    $app->post("/game", function() use($app) {
+    $app->post("/game", function() use ($app) {
         $player_one = $_POST['player-one'];
         $player_two = $_POST['player-two'];
 
@@ -34,7 +34,7 @@
         return $app['twig']->render('win.html.twig', array('winner' => $win));
     });
 
-    $app->post('/delete', function() use($app) {
+    $app->post('/delete', function() use ($app) {
         RockPaperScissors::deleteAll();
         return $app['twig']->render('delete.html.twig');
     });
